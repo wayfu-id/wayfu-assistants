@@ -70,6 +70,26 @@
       }
     ]
   },
+  "browserslist": [
+    ">= 0.5%",
+    "last 5 major versions",
+    "not dead",
+    "Chrome >= 8",
+    "Firefox >= 3"
+  ],
+  "standard-version": {
+    "scripts": {
+      "postbump": "npm run build:prod && git add ./*.js assets/* && git commit -m \"chore(build): build & bump new version\""
+    }
+  },
+  "commitizen": {
+    "path": "cz-conventional-changelog"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "author": "Rizal Nurhidayat (https://github.com/rzlnhd)",
   "license": "CC BY-NC-ND 4.0; https://creativecommons.org/licenses/by-nc-nd/4.0/",
   "devDependencies": {
