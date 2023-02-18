@@ -1,0 +1,8 @@
+package-lock.json
+
+assets/*-dev.*
+release
+build/
+.husky/_
+dev/
+node_modules
