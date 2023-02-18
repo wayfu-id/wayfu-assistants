@@ -1,0 +1,105 @@
+{
+  "name": "wayfu-assistants",
+  "version": "0.0.1",
+  "description": "WayFu assistants feature",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "js": "npx gulp bundleScript",
+    "build": "npx gulp build",
+    "build:dev": "npm run build",
+    "build:prod": "npm run build -- --mode=production",
+    "release": "standard-version"
+  },
+  "keywords": [
+    "assistant",
+    "oriflame"
+  ],
+  "userscript": {
+    "name": "WayFu - Easy Follow Up",
+    "namespace": "#WayFu",
+    "version": "<%= pkg.version %>",
+    "date": "##timestamp##",
+    "description": "<%= pkg.description %>",
+    "copyright": "2018, <%= pkg.author %>",
+    "author": "<%= pkg.author %>",
+    "licence": [
+      "CC BY-NC-ND; https://creativecommons.org/licenses/by-nc-nd/4.0/"
+    ],
+    "homepage": "<%= pkg.homepage %>",
+    "supportURL": "<%= pkg.bugs %>",
+    "icon": "https://oriflame.com/favicon.ico",
+    "match": [
+      "https://*.oriflame.com/*",
+      "https://*.oriflame.vn/*"
+    ],
+    "grant": [
+      "GM_addStyle",
+      "GM_getValue",
+      "GM_setValue",
+      "GM_deleteValue",
+      "GM_listValues",
+      "GM_xmlhttpRequest",
+      "GM_getResourceText",
+      "GM_getResourceURL",
+      "GM_log",
+      "GM_openInTab",
+      "GM_setClipboard",
+      "GM_info",
+      "GM_notification"
+    ],
+    "connect": [
+      "oriflame.com",
+      "oriflame.vn",
+      "ipaper.io"
+    ],
+    "updateURL": "https://wayfu.id/v4/update.meta.js",
+    "downloadURL": "https://wayfu.id/v4/wayfu-install.user.js",
+    "resource": [
+      {
+        "ico": "https://wayfu.id/v4/assets/wayfu-icon.webp"
+      },
+      {
+        "pnl": "https://wayfu.id/v4/assets/wayfu-view.html"
+      },
+      {
+        "clr": "https://wayfu.id/v4/assets/wayfu-colors.json"
+      },
+      {
+        "css": "https://wayfu.id/v4/assets/wayfu-style.min.css"
+      }
+    ]
+  },
+  "author": "Rizal Nurhidayat (https://github.com/rzlnhd)",
+  "license": "CC BY-NC-ND 4.0; https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "@types/tampermonkey": "^4.0.10",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^9.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "babelify": "^10.0.0",
+    "esmify": "^2.1.1",
+    "file-saver": "^2.0.5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-bump": "^3.2.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-header": "^2.0.9",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^3.0.2",
+    "husky": "^8.0.3",
+    "minimist": "^1.2.8",
+    "sass": "^1.58.3",
+    "typescript": "^4.9.5",
+    "vinyl": "^3.0.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "webpack": "^5.75.0",
+    "webpack-stream": "^7.0.0"
+  }
+}

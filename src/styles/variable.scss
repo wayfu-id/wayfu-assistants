@@ -1,0 +1,15 @@
+$darkbg: rgb(0, 0, 0, 0.05);
+$grey: rgba(74, 74, 74, 0.5);
+$lightGrey: #4a4a4a;
+$darkGrey: #2a2a2a;
+$modalBg: rgba(182, 182, 182, 0.5);
+$modalBorder: #f2f2f2;
+
+@mixin area($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin square($length) {
+    @include area($length, $length);
+}

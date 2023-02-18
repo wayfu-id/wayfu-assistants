@@ -1,0 +1,16 @@
+{
+    "env": "development",
+    "globs": {
+        "app": "src/index.js"
+    },
+    "path": {
+        "production": {
+            "dest": "./",
+            "suffix": "-install.user"
+        },
+        "development": {
+            "dest": "build/",
+            "suffix": "-dev.user"
+        }
+    }
+}
